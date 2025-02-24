@@ -1,20 +1,10 @@
 import pandas as pd
-import psycopg2
-from meteostat import Daily, Stations
+from meteostat import Hourly, Stations
 from datetime import datetime, timedelta
-
-# Paramètres de connexion PostgreSQL
-DB_PARAMS = {
-    "dbname": "données_météorologiques",
-    "user": "postgres",
-    "password": "",
-    "host": "localhost",
-    "port": "5432"
-}
 
 # Liste des villes avec leurs coordonnées GPS (latitude, longitude)
 CITIES = {
-     "Tunis": (36.8002068, 10.1857757),
+    "Tunis": (36.8002068, 10.1857757),
     "Ariana": (36.968573500000005, 10.121985506329507),
     "Ben Arous": (36.63064825, 10.210082703817534),
     "Manouba": (36.7624363, 9.833619078262766),
@@ -44,30 +34,41 @@ CITIES = {
 END_DATE = datetime.today()
 START_DATE = END_DATE - timedelta(days=5*365)
 
-# Connexion à PostgreSQL
-conn = psycopg2.connect(**DB_PARAMS)
-cursor = conn.cursor()
-print(data.columns)  # Vérifie les noms des colonnes récupérées
+# Liste pour stocker toutes les données
+all_data = []
 
-# Récupération et insertion des données
+# Récupération et extraction des données horaires pour chaque ville
 for city, (lat, lon) in CITIES.items():
-    print(f"Récupération des données pour {city}...")
+    print(f"Récupération des données horaires pour {city}...")
     stations = Stations().nearby(lat, lon)
     station = stations.fetch(1).index[0]  # Prendre la station la plus proche
-    
-    data = Daily(station, START_DATE, END_DATE)
-    data = data.fetch()
-    
-    for index, row in data.iterrows():
-        cursor.execute('''
-            INSERT INTO historic_meteo_data (city, date, temperature, precipitation, wind_speed)
-            VALUES (%s, %s, %s, %s, %s)
-        ''', (city, index.date(), row['tavg'], row['prcp'], row['wspd']))
-    
-    conn.commit()
-    print(f"Données insérées pour {city} ✅")
 
-# Fermeture de la connexion
-cursor.close()
-conn.close()
-print("Importation terminée ")
+    data = Hourly(station, START_DATE, END_DATE)
+    data = data.fetch()
+
+    # Vérifier si des données sont récupérées
+    if not data.empty:
+        # Transformation des données en DataFrame
+        df = pd.DataFrame(data)
+
+        # Extraire la date et l'heure
+        df['date'] = df.index.date
+        df['hour'] = df.index.hour
+
+        # Ajouter la colonne "city" avec le nom de la ville
+        df['city'] = city
+
+        # Ajouter les données de cette ville dans la liste all_data
+        all_data.append(df)
+
+        print(f"Données horaires extraites pour {city} ✅")
+    else:
+        print(f"Aucune donnée récupérée pour {city}")
+
+# Concaténer toutes les données en un seul DataFrame
+final_df = pd.concat(all_data)
+
+# Sauvegarde des données dans un fichier CSV
+final_df.to_csv("data_all_cities_hourly.csv", index=False)
+
+print("Extraction des données terminée pour toutes les villes.")
