@@ -61,7 +61,7 @@ for city, (lat, lon) in CITIES.items():
         # Ajouter les données de cette ville dans la liste all_data
         all_data.append(df)
 
-        print(f"Données horaires extraites pour {city} ✅")
+        print(f"Données horaires extraites pour {city} ")
     else:
         print(f"Aucune donnée récupérée pour {city}")
 
