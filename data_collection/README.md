@@ -21,7 +21,7 @@ Chaque ligne du fichier correspond à une journée et une localisation (gouverno
 
 ### 🔹 Variables collectées
 
-- Température (min, max, moyenne – °C)  
+- Température (°C)  
 - Humidité (%)  
 - Vitesse et direction du vent  
 - Précipitations (mm)
