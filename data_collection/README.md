@@ -13,7 +13,7 @@
 ### 🔹 Période couverte
 
 - **De** : 2020  
-- **À** : 2025 (inclus)  
+- **À** : 2025   
 - **Fréquence** : Journalière  
 Chaque ligne du fichier correspond à une journée et une localisation (gouvernorat).
 
