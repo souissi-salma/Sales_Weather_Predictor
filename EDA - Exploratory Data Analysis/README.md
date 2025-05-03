@@ -104,9 +104,9 @@
 
 ---
 
-> **Contact :** Salma Souissi – *Étudiante en Data Science*
+> **Contact :** Salma Souissi – *Étudiante en Master Pro/Data Science à la **[Faculté des Sciences de Monastir](https://fsm.rnu.tn/)***
 > **Dépôt** : [https://github.com/souissi-salma/Sales\_Weather\_Predictor](https://github.com/souissi-salma/Sales_Weather_Predictor)
 
-```
-```
+
+
 
