@@ -94,12 +94,12 @@
 
 ---
 ## REMARQUE : 
-**VOUS POUVEZ TROUVER TOUTES LES VISUAISATIONS [ICI.]**(https://github.com/souissi-salma/Sales_Weather_Predictor/tree/main/EDA%20-%20Exploratory%20Data%20Analysis/figure)
+**VOUS POUVEZ TROUVER TOUTES LES VISUAISATIONS [ICI.](https://github.com/souissi-salma/Sales_Weather_Predictor/tree/main/EDA%20-%20Exploratory%20Data%20Analysis/figure)**
 
 ##  Prochaines étapes
 
 * **Modélisation prédictive** : régression linéaire, forêts aléatoires, réseaux neuronaux.
-* **Déploiement** : création d’une interface  pour importer un CSV client, récupérer la météo, générer et visualiser des prévisions en temps réel.
+* **Déploiement** : création d’une interface  pour importer un CSV client, récupérer la météo, générer et visualiser des prévisions en temps réel.<br>
 ❗❗ **même si les données sont fictives, ce travail permet déjà de préparer un modèle flexible et de concevoir une infrastructure solide (modèle + interface utilisateur). Cela veut dire qu’à l’avenir, si des données réelles deviennent disponibles, il suffira de réentraîner le modèle sans tout recommencer de zéro. Cette approche rend le projet pérenne et facilement adaptable pour une utilisation réelle plus tard.**
 
 ---
