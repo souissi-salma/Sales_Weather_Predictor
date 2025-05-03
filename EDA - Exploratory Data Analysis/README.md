@@ -1,5 +1,5 @@
 
-# 🧪 Exploratory Data Analysis (EDA) – Sales & Weather Predictor
+#  Exploratory Data Analysis (EDA) – Sales & Weather Predictor
 
 > **Auteur :** Salma Souissi  
 > **Date :** fin d'Avril 2025  
@@ -7,7 +7,7 @@
 
 ---
 
-## 🗂 Structure du notebook
+##  Structure du notebook
 
 1. **Chargement & structure des données**  
    - Lecture du CSV, conversion des dates, aperçu des dimensions et des types.  
@@ -58,7 +58,7 @@
 
 ---
 
-## 🔧 Prérequis
+##  Prérequis
 
 - Python ≥ 3.8  
 - Packages : `pandas`, `numpy`, `matplotlib`, `seaborn`  
@@ -66,24 +66,26 @@
 
 ---
 
-## 🚀 Utilisation
+##  Utilisation
 
 1. Cloner ce dépôt :  
    ```bash
    git clone https://github.com/souissi-salma/Sales_Weather_Predictor.git
    cd Sales_Weather_Predictor/EDA\ -\ Exploratory\ Data\ Analysis
-````
+   ```
+
 
 2. Lancer le notebook :
 
    ```bash
    jupyter notebook Exploratory_Data_Analysis\ (EDA).ipynb
    ```
-3. Exécuter les cellules dans l’ordre pour reproduire les analyses et visualisations.
+3. Exécuter les cellules dans l’ordre pour reproduire les analyses et visualisations
+*  **télécharger le csv data.csv ici [DATA.csv](https://drive.google.com/drive/u/0/folders/1z5AtyTt7R6i-sNzT19i-5ZRhojKX4QfX)**
 
 ---
 
-## 📈 Insights clés
+##  Insights clés
 
 * **Effet immédiat et prolongé** de la météo (lag1, lag3, lag7) sur les ventes de produits météo‑sensibles (crème solaire, boissons fraîches, ustensiles jetables).
 * **Pics de consommation** lors d’événements : Ramadan (+30 %), Nouvel An (+30 %), vacances scolaires (+13 % jardinage).
@@ -92,16 +94,15 @@
 
 ---
 
-## 🔭 Prochaines étapes
+##  Prochaines étapes
 
 * **Modélisation prédictive** : régression linéaire, forêts aléatoires, réseaux neuronaux.
-* **Feature engineering** : variables météo décalées, interactions événements.
-* **Déploiement** : création d’une interface (Streamlit/Flask) pour importer un CSV client, récupérer la météo, générer et visualiser des prévisions en temps réel.
+* **Déploiement** : création d’une interface  pour importer un CSV client, récupérer la météo, générer et visualiser des prévisions en temps réel.
+> **même si les données sont fictives, ce travail permet déjà de préparer un modèle flexible et de concevoir une infrastructure solide (modèle + interface utilisateur). Cela veut dire qu’à l’avenir, si des données réelles deviennent disponibles, il suffira de réentraîner le modèle sans tout recommencer de zéro. Cette approche rend le projet pérenne et facilement adaptable pour une utilisation réelle plus tard.**
 
 ---
 
 > **Contact :** Salma Souissi – *Étudiante en Data Science*
-> **Licence** : MIT
 > **Dépôt** : [https://github.com/souissi-salma/Sales\_Weather\_Predictor](https://github.com/souissi-salma/Sales_Weather_Predictor)
 
 ```
