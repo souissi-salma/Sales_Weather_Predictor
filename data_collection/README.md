@@ -97,7 +97,7 @@ Des mécanismes garantissent le réalisme :
 - Boissons (fraîches / chaudes)
 - Produits d’hiver : charbon, produits laitiers
 - Produits d’été : crèmes solaires, anti-moustiques
-- Produits saisonniers : jardinage, pâtisserie…
+- Produits saisonniers : jardinage, …
 
 Chaque produit suit une **logique météo** propre.
 
@@ -105,7 +105,11 @@ Chaque produit suit une **logique météo** propre.
 
 ### ✅ Résultats
 
-- **14 variables synthétiques générées** :('boissons_fraiches', 'snacks_sucré', 'snacks_salé', 'produits_laitiers_frais(yaourts, fromage blanc)', 'produits_laitiers_fromage', 'produits_laitiers(lait,boissons lactées)', 'produits_laitiers(lait glacé,crème glacée)', 'boissons_chaudes', 'produits anti_moustiques', 'produits_cuisson', 'ventes_deodorant', 'ventes_lingettes', 'ventes_produits_hydratation', 'ventes_charbon')
+- **13 variables synthétiques générées** :('boissons fraiches', 'boissons chaudes', 'snacks sucrés',
+       'snacks salés', 'produits laitiers frais', 'produits de jardinage',
+       'ustensiles jetables', 'crème solaire', 'équipements d urgence',
+       'soins hygiene', 'soins hydratants', 'Charbon',
+       'produits anti_moustiques')
 
 - **4 saisons complètes** simulées
 - **3 types de régions** intégrées
