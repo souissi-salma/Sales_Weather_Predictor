@@ -94,7 +94,7 @@
 
 ---
 ## REMARQUE : 
-**VOUS POUVEZ TROUVER TOUTES LES VISUAISATIONS [ICI.](https://github.com/souissi-salma/Sales_Weather_Predictor/tree/main/EDA%20-%20Exploratory%20Data%20Analysis/figure)**
+**VOUS POUVEZ TROUVER TOUTES LES VISUAISATIONS [ICI.](https://github.com/souissi-salma/Sales_Weather_Predictor/tree/main/EDA%20-%20Exploratory%20Data%20Analysis/Visualisations)**
 
 ##  Prochaines étapes
 
