@@ -1,6 +1,6 @@
-## 1. 📡 Collecte des Données Climatiques
+## 1.  Collecte des Données Climatiques
 
-### 🔹 Sources de données
+###  Sources de données
 
 - **Meteostat** : Librairie Python gratuite permettant un accès à des données météorologiques historiques détaillées (stations, résumés quotidiens, etc.).  
 ➡ Ce choix a été motivé par la **longue période d'historique accessible gratuitement**, essentielle pour des analyses temporelles fiables.
@@ -10,7 +10,7 @@
 
 ---
 
-### 🔹 Période couverte
+###  Période couverte
 
 - **De** : 2020  
 - **À** : 2025   
@@ -19,7 +19,7 @@ Chaque ligne du fichier correspond à une journée et une localisation (gouverno
 
 ---
 
-### 🔹 Variables collectées
+###  Variables collectées
 
 - Température (°C)  
 - Humidité (%)  
@@ -28,9 +28,9 @@ Chaque ligne du fichier correspond à une journée et une localisation (gouverno
 
 ---
 
-### 🔹 Nouvelles Features Intégrées
+###  Nouvelles Features Intégrées
 
-#### 📅 Variables calendaires
+####  Variables calendaires
 
 - **Jour de la semaine**
 - **Mois**
@@ -43,7 +43,7 @@ Chaque ligne du fichier correspond à une journée et une localisation (gouverno
 
 ➡ Ces variables permettent de mieux modéliser les effets temporels sur les ventes.
 
-#### 🌍 Variables régionales
+####  Variables régionales
 
 - Localisation (gouvernorat)
 - Zone côtière (oui/non)
@@ -51,7 +51,7 @@ Chaque ligne du fichier correspond à une journée et une localisation (gouverno
 
 ➡ Permet de comparer les comportements selon le type de zone.
 
-#### 🌡️ Indices météorologiques dérivés
+####  Indices météorologiques dérivés
 
 - **Indice de Vague de Chaleur** : température > 35°C pendant 3 jours
 - **Indice de Vague de Froid** : température < 9°C pendant 3 jours
@@ -59,18 +59,18 @@ Chaque ligne du fichier correspond à une journée et une localisation (gouverno
 - **Indice de Tempête** : vitesse du vent > 60 km/h
 - **Indice de Sécheresse** : précipitations < 10 mm sur les 20 derniers jours
 
-#### 🕒 Variables de décalage temporel (lag features)
+####  Variables de décalage temporel (lag features)
 
 - Ajout des valeurs météo précédentes à J-1, J-3 et J-7  
 ➡ Très utile pour la modélisation prédictive, notamment en séries temporelles.
 
 ---
 
-## 2. 🧪 Génération des Données de Ventes Synthétiques
+## 2.  Génération des Données de Ventes Synthétiques
 
-### 🔷 Méthodologie
+###  Méthodologie
 
-#### 🧰 Approche technique
+####  Approche technique
 
 Développement d’un **générateur modulaire Python** basé sur :
 - Une **modélisation différente par catégorie de produit**
@@ -84,7 +84,7 @@ Des mécanismes garantissent le réalisme :
 - Bruit aléatoire contrôlé
 - Validation statistique
 
-#### 🧠 Méthode utilisée
+####  Méthode utilisée
 
 - Règles métier simples, inspirées des comportements d'achat réels
 - Pas de GAN ou de modèles statistiques avancés  
@@ -92,7 +92,7 @@ Des mécanismes garantissent le réalisme :
 
 ---
 
-### 🔸 Produits modélisés
+###  Produits modélisés
 
 - Boissons (fraîches / chaudes)
 - Produits d’hiver : charbon, produits laitiers
@@ -103,7 +103,7 @@ Chaque produit suit une **logique météo** propre.
 
 ---
 
-### ✅ Résultats
+###  Résultats
 
 - **13 variables synthétiques générées** :('boissons fraiches', 'boissons chaudes', 'snacks sucrés',
        'snacks salés', 'produits laitiers frais', 'produits de jardinage',
@@ -118,14 +118,14 @@ Chaque produit suit une **logique météo** propre.
 
 ---
 
-## 3. 🧹 Préparation du Dataset Final
+## 3.  Préparation du Dataset Final
 
-### 🔹 Fusion des données
+###  Fusion des données
 
 - Jointure sur la **date** et le **gouvernorat**
 - Chaque ligne : un jour, un gouvernorat, toutes les variables météo + les ventes simulées
 
-### 🔹 Format de sortie
+###  Format de sortie
 
 - **Fichiers CSV**  
 ➡ Facile à manipuler et compatible avec les outils de data science et de visualisation.
@@ -135,7 +135,7 @@ Chaque produit suit une **logique météo** propre.
 
 ---
 
-## 👩‍💻 Auteure
+##  Auteure
 
 **Souissi Salma**  
 Master Data Science – 2025  
